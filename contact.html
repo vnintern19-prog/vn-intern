@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | VN INTERN</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #0b1d45;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #071a3d;
+      color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #2386e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #2386e8;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #dceaff;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* GENERAL */
+    .section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #071a3d;
+    }
+
+    .section-text {
+      text-align: center;
+      color: #65738b;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* CONTACT CARDS */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 35px 25px;
+      text-align: center;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(7, 26, 61, 0.08);
+    }
+
+    .contact-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card h3 {
+      font-size: 22px;
+      color: #071a3d;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #65738b;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-card a:hover {
+      color: #1769d1;
+    }
+
+    /* MAIN CONTACT BOX */
+    .main-contact {
+      margin-top: 50px;
+      background: white;
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: 0 10px 35px rgba(7, 26, 61, 0.10);
+      text-align: center;
+    }
+
+    .main-contact h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .main-contact p {
+      color: #65738b;
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2386e8, #0b3f91);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #eef4ff;
+      color: #0b3f91;
+    }
+
+    /* ADDRESS */
+    .address-section {
+      background: #071a3d;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .address-section h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .address-section p {
+      color: #dceaff;
+      font-size: 17px;
+    }
+
+    /* HOURS */
+    .hours {
+      margin-top: 50px;
+      text-align: center;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+    }
+
+    .hours h2 {
+      margin-bottom: 15px;
+      color: #071a3d;
+    }
+
+    .hours p {
+      color: #65738b;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041126;
+      color: #bfcce0;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <div class="logo">
+      VN <span>INTERN</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="internship.html">Internship</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+
+    <p>
+      Have a question about our internship or training programs?
+      We are here to help.
+    </p>
+  </section>
+
+  <!-- CONTACT DETAILS -->
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">Get in Touch</h2>
+
+      <p class="section-text">
+        Contact VN INTERN for general information and assistance.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+
+          <div class="contact-icon">📧</div>
+
+          <h3>Email Us</h3>
+
+          <a href="mailto:vnintern19@gmail.com">
+            vnintern19@gmail.com
+          </a>
+
+        </div>
+
+        <!-- PHONE -->
+        <div class="contact-card">
+
+          <div class="contact-icon">📞</div>
+
+          <h3>Call Us</h3>
+
+          <p>9798251318</p>
+          <p>6202113675</p>
+
+        </div>
+
+        <!-- LOCATION -->
+        <div class="contact-card">
+
+          <div class="contact-icon">📍</div>
+
+          <h3>Visit Us</h3>
+
+          <p>
+            Near Nagar Nigam Office,<br>
+            Bihar Sharif, Nalanda,<br>
+            803101
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK CONTACT -->
+      <div class="main-contact">
+
+        <h2>Need Assistance?</h2>
+
+        <p>
+          For questions related to internship, training,
+          applications or certificate verification,
+          feel free to contact us.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            href="mailto:vnintern19@gmail.com"
+            class="btn btn-primary"
+          >
+            📧 Send Email
+          </a>
+
+          <a
+            href="tel:9798251318"
+            class="btn btn-secondary"
+          >
+            📞 Call Now
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- WORKING HOURS -->
+      <div class="hours">
+
+        <h2>Support</h2>
+
+        <p>
+          Contact us through email or phone for information
+          regarding VN INTERN programs and services.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ADDRESS -->
+  <section class="address-section">
+
+    <h2>Our Location</h2>
+
+    <p>
+      📍 Near Nagar Nigam Office,<br>
+      Bihar Sharif, Nalanda, Bihar – 803101
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>VN INTERN</strong> — Train • Intern • Transform
+    </p>
+
+    <br>
+
+    <p>
+      📧 vnintern19@gmail.com
+      &nbsp; | &nbsp;
+      📞 9798251318, 6202113675
+    </p>
+
+    <br>
+
+    <p>
+      Near Nagar Nigam Office, Bihar Sharif, Nalanda, 803101
+    </p>
+
+    <br>
+
+    <p>© 2026 VN INTERN. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
