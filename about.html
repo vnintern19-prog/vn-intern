@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | VN INTERN</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #0b1d45;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #071a3d;
+      color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #2386e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #2386e8;
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      color: #dceaff;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* GENERAL SECTION */
+    .section {
+      padding: 80px 8%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 38px;
+      color: #071a3d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .section-text {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      color: #5d6b82;
+      font-size: 17px;
+    }
+
+    /* ABOUT BOX */
+    .about-box {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .about-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-content h2 {
+      color: #071a3d;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      color: #5d6b82;
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .about-card {
+      flex: 1;
+      min-width: 280px;
+      background: #f4f8ff;
+      padding: 40px;
+      border-radius: 18px;
+      border-left: 6px solid #1769d1;
+    }
+
+    .about-card h3 {
+      font-size: 25px;
+      color: #071a3d;
+      margin-bottom: 10px;
+    }
+
+    .about-card p {
+      color: #5d6b82;
+      margin-bottom: 25px;
+    }
+
+    /* MISSION VISION */
+    .alt-section {
+      background: #f4f8ff;
+    }
+
+    .cards {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      width: 350px;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      color: #071a3d;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #65738b;
+    }
+
+    /* VALUES */
+    .values {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .value {
+      width: 240px;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .value h3 {
+      color: #1769d1;
+      font-size: 22px;
+      margin: 10px 0;
+    }
+
+    .value p {
+      color: #65738b;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      text-align: center;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #dceaff;
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #071a3d;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041126;
+      color: #bfcce0;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .page-hero h1 {
+        font-size: 40px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .about-content h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      VN <span>INTERN</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="internship.html">Internship</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <h1>About VN INTERN</h1>
+
+    <p>
+      Empowering students through practical learning,
+      internship opportunities and professional growth.
+    </p>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="section">
+    <div class="container">
+
+      <div class="about-box">
+
+        <div class="about-content">
+          <h2>Who We Are</h2>
+
+          <p>
+            VN INTERN is dedicated to supporting students in their
+            journey from academic learning to practical and professional
+            development.
+          </p>
+
+          <p>
+            We provide internship and training opportunities designed
+            to help students gain exposure, develop useful skills and
+            build confidence for their future careers.
+          </p>
+
+          <p>
+            Our programs are available for students from B.Sc.,
+            B.Tech and Diploma backgrounds across different fields,
+            subject to program availability.
+          </p>
+        </div>
+
+        <div class="about-card">
+
+          <h3>🎓 Train</h3>
+          <p>
+            Learn and develop practical knowledge beyond the classroom.
+          </p>
+
+          <h3>💼 Intern</h3>
+          <p>
+            Gain valuable exposure through structured internship opportunities.
+          </p>
+
+          <h3>🚀 Transform</h3>
+          <p>
+            Build confidence and move forward towards your career goals.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="section alt-section">
+
+    <div class="container">
+
+      <h2 class="section-title">Our Purpose</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">🎯</div>
+
+          <h3>Our Mission</h3>
+
+          <p>
+            To provide accessible and meaningful internship and training
+            opportunities that help students develop practical skills,
+            professional awareness and career readiness.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔭</div>
+
+          <h3>Our Vision</h3>
+
+          <p>
+            To become a trusted platform that supports students in
+            connecting their academic journey with practical learning
+            and future professional opportunities.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHO CAN APPLY -->
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">Who Can Apply?</h2>
+
+      <p class="section-text">
+        VN INTERN welcomes students from different academic backgrounds.
+      </p>
+
+      <div class="values">
+
+        <div class="value">
+          <div style="font-size:40px;">🔬</div>
+          <h3>B.Sc.</h3>
+          <p>Students from all B.Sc. fields.</p>
+        </div>
+
+        <div class="value">
+          <div style="font-size:40px;">⚙️</div>
+          <h3>B.Tech</h3>
+          <p>Students from all B.Tech fields.</p>
+        </div>
+
+        <div class="value">
+          <div style="font-size:40px;">🛠️</div>
+          <h3>Diploma</h3>
+          <p>Students from all Diploma fields.</p>
+        </div>
+
+        <div class="value">
+          <div style="font-size:40px;">📚</div>
+          <h3>Learning</h3>
+          <p>Focused on growth and practical development.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+
+    <h2>Start Your Journey With VN INTERN</h2>
+
+    <p>
+      Explore our internship and training opportunities today.
+    </p>
+
+    <a href="apply.html" class="btn">Apply Now</a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>VN INTERN</strong> — Train • Intern • Transform
+    </p>
+
+    <br>
+
+    <p>
+      📧 vnintern19@gmail.com
+      &nbsp; | &nbsp;
+      📞 9798251318, 6202113675
+    </p>
+
+    <br>
+
+    <p>
+      Near Nagar Nigam Office, Bihar Sharif, Nalanda, 803101
+    </p>
+
+    <br>
+
+    <p>© 2026 VN INTERN. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
