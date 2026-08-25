@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apply Now | VN INTERN</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #0b1d45;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #071a3d;
+      color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #2386e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #2386e8;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      color: white;
+      text-align: center;
+      padding: 85px 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      color: #dceaff;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* MAIN */
+    .section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .section-text {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      color: #65738b;
+    }
+
+    /* APPLICATION BOX */
+    .apply-box {
+      max-width: 800px;
+      margin: 45px auto 0;
+      background: white;
+      border-radius: 20px;
+      padding: 45px;
+      box-shadow: 0 10px 35px rgba(7, 26, 61, 0.10);
+      text-align: center;
+    }
+
+    .apply-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .apply-box h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .apply-box p {
+      color: #65738b;
+      margin-bottom: 25px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      padding: 16px 35px;
+      background: linear-gradient(135deg, #2386e8, #0b3f91);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .apply-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .note {
+      margin-top: 22px;
+      font-size: 14px;
+      color: #8793a6;
+    }
+
+    /* STEPS */
+    .steps-section {
+      background: white;
+    }
+
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 45px;
+    }
+
+    .step {
+      width: 230px;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #1769d1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      color: #071a3d;
+    }
+
+    .step p {
+      color: #65738b;
+      font-size: 15px;
+    }
+
+    /* ELIGIBILITY */
+    .eligibility {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .eligibility-card {
+      width: 230px;
+      background: white;
+      padding: 25px 15px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    .eligibility-card div {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .eligibility-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .eligibility-card p {
+      color: #65738b;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      margin-top: 45px;
+      background: #071a3d;
+      color: white;
+      padding: 40px 25px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: #dceaff;
+      margin: 8px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041126;
+      color: #bfcce0;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .apply-box {
+        padding: 35px 20px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      VN <span>INTERN</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="internship.html">Internship</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Apply Now</h1>
+    <p>
+      Take the first step towards practical learning,
+      internship opportunities and professional growth.
+    </p>
+  </section>
+
+  <!-- APPLICATION -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title">Start Your Application</h2>
+
+      <p class="section-text">
+        Click the button below and complete the official
+        VN INTERN application form.
+      </p>
+
+      <div class="apply-box">
+
+        <div class="apply-icon">📝</div>
+
+        <h2>VN INTERN Application Form</h2>
+
+        <p>
+          Please provide accurate information while filling out
+          the application form.
+        </p>
+
+        <!-- GOOGLE FORM LINK YAHAN ADD HOGA -->
+        <a
+          href="#"
+          id="googleFormLink"
+          class="apply-btn"
+          target="_blank"
+        >
+          Fill Application Form
+        </a>
+
+        <p class="note">
+          The application form will open in a new tab.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO APPLY -->
+  <section class="section steps-section">
+
+    <div class="container">
+
+      <h2 class="section-title">How to Apply?</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Click Apply</h3>
+          <p>Open the official VN INTERN application form.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Fill Details</h3>
+          <p>Enter your personal and academic details correctly.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Submit Form</h3>
+          <p>Review your information and submit the application.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Wait for Update</h3>
+          <p>You will receive further information regarding the process.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY -->
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">Who Can Apply?</h2>
+
+      <p class="section-text">
+        Students from the following academic categories can explore
+        suitable internship and training opportunities.
+      </p>
+
+      <div class="eligibility">
+
+        <div class="eligibility-card">
+          <div>🔬</div>
+          <h3>B.Sc.</h3>
+          <p>Students from all B.Sc. fields.</p>
+        </div>
+
+        <div class="eligibility-card">
+          <div>⚙️</div>
+          <h3>B.Tech</h3>
+          <p>Students from all B.Tech fields.</p>
+        </div>
+
+        <div class="eligibility-card">
+          <div>🛠️</div>
+          <h3>Diploma</h3>
+          <p>Students from all Diploma fields.</p>
+        </div>
+
+      </div>
+
+      <div class="contact-box">
+        <h2>Need Help?</h2>
+
+        <p>📧 vnintern19@gmail.com</p>
+
+        <p>📞 9798251318 | 6202113675</p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>VN INTERN</strong> — Train • Intern • Transform
+    </p>
+
+    <br>
+
+    <p>
+      📧 vnintern19@gmail.com
+      &nbsp; | &nbsp;
+      📞 9798251318, 6202113675
+    </p>
+
+    <br>
+
+    <p>
+      Near Nagar Nigam Office, Bihar Sharif, Nalanda, 803101
+    </p>
+
+    <br>
+
+    <p>© 2026 VN INTERN. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
