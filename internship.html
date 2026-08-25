@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Internship | VN INTERN</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #0b1d45;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #071a3d;
+      color: white;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #2386e8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #2386e8;
+    }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .page-hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .page-hero p {
+      color: #dceaff;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* GENERAL */
+    .section {
+      padding: 80px 8%;
+    }
+
+    .alt-section {
+      background: #f4f8ff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      color: #071a3d;
+      margin-bottom: 15px;
+    }
+
+    .section-text {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #65738b;
+      font-size: 17px;
+    }
+
+    /* INTRO */
+    .intro-box {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .intro-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .intro-content h2 {
+      font-size: 34px;
+      margin-bottom: 18px;
+      color: #071a3d;
+    }
+
+    .intro-content p {
+      color: #5d6b82;
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+
+    .info-box {
+      flex: 1;
+      min-width: 280px;
+      background: #f4f8ff;
+      padding: 35px;
+      border-radius: 18px;
+      border-left: 6px solid #1769d1;
+    }
+
+    .info-box h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .info-box ul {
+      list-style: none;
+    }
+
+    .info-box li {
+      padding: 10px 0;
+      border-bottom: 1px solid #dce5f4;
+      color: #53617a;
+    }
+
+    .info-box li::before {
+      content: "✓";
+      color: #1769d1;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .step {
+      width: 220px;
+      text-align: center;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .step-number {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2386e8, #071a3d);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      color: #071a3d;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: #65738b;
+      font-size: 15px;
+    }
+
+    /* ELIGIBILITY */
+    .eligibility-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .eligibility-card {
+      width: 290px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #dce5f4;
+    }
+
+    .eligibility-card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .eligibility-card h3 {
+      color: #071a3d;
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    .eligibility-card p {
+      color: #65738b;
+    }
+
+    /* IMPORTANT NOTE */
+    .notice {
+      background: #fff8e6;
+      border-left: 6px solid #f2b84b;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 40px auto 0;
+    }
+
+    .notice h3 {
+      color: #8a6100;
+      margin-bottom: 8px;
+    }
+
+    .notice p {
+      color: #765b1c;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #071a3d, #0d4fa8);
+      text-align: center;
+      color: white;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #dceaff;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #071a3d;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041126;
+      color: #bfcce0;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .page-hero h1 {
+        font-size: 40px;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .intro-content h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      VN <span>INTERN</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="internship.html">Internship</a>
+      <a href="certificate.html">Certificate</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <h1>Internship Experience</h1>
+
+    <p>
+      Take a step beyond classroom learning and begin your
+      journey towards practical and professional development.
+    </p>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="intro-box">
+
+        <div class="intro-content">
+          <h2>Learn. Experience. Grow.</h2>
+
+          <p>
+            An internship is an opportunity to gain practical exposure
+            and understand how knowledge and skills can be applied
+            in a professional environment.
+          </p>
+
+          <p>
+            VN INTERN aims to provide students with structured
+            internship and training experiences that support learning,
+            skill development and career readiness.
+          </p>
+
+          <p>
+            Program activities and requirements may vary depending
+            on the selected internship or training opportunity.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>What You Can Expect</h3>
+
+          <ul>
+            <li>Structured learning experience</li>
+            <li>Practical skill development</li>
+            <li>Professional exposure</li>
+            <li>Guidance during the program</li>
+            <li>Career-oriented learning</li>
+            <li>Completion documentation for eligible participants</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section alt-section">
+
+    <div class="container">
+
+      <h2 class="section-title">How the Internship Process Works</h2>
+
+      <p class="section-text">
+        Follow these simple steps to begin your journey with VN INTERN.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Explore</h3>
+          <p>Check available internship and training opportunities.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Apply</h3>
+          <p>Submit your details through the official application form.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Review</h3>
+          <p>Your application is reviewed according to program requirements.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Start</h3>
+          <p>Receive further program information and begin your journey.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY -->
+  <section class="section">
+
+    <div class="container">
+
+      <h2 class="section-title">Who Can Apply?</h2>
+
+      <p class="section-text">
+        Internship and training opportunities are available for students
+        from the following academic categories.
+      </p>
+
+      <div class="eligibility-cards">
+
+        <div class="eligibility-card">
+          <div class="icon">🔬</div>
+          <h3>B.Sc.</h3>
+          <p>
+            Students from all B.Sc. fields can explore suitable
+            internship and training opportunities.
+          </p>
+        </div>
+
+        <div class="eligibility-card">
+          <div class="icon">⚙️</div>
+          <h3>B.Tech</h3>
+          <p>
+            Students from all B.Tech branches can explore
+            suitable opportunities.
+          </p>
+        </div>
+
+        <div class="eligibility-card">
+          <div class="icon">🛠️</div>
+          <h3>Diploma</h3>
+          <p>
+            Students from all Diploma branches can explore
+            suitable opportunities.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="notice">
+        <h3>Important Information</h3>
+
+        <p>
+          Specific internship domains, duration, eligibility requirements,
+          activities and program details may vary according to the
+          available program. Please check the official application
+          information for the latest details.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta">
+
+    <h2>Ready to Begin Your Journey?</h2>
+
+    <p>
+      Take the next step towards learning, practical exposure and growth.
+    </p>
+
+    <a href="apply.html" class="btn">Apply Now</a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      <strong>VN INTERN</strong> — Train • Intern • Transform
+    </p>
+
+    <br>
+
+    <p>
+      📧 vnintern19@gmail.com
+      &nbsp; | &nbsp;
+      📞 9798251318, 6202113675
+    </p>
+
+    <br>
+
+    <p>
+      Near Nagar Nigam Office, Bihar Sharif, Nalanda, 803101
+    </p>
+
+    <br>
+
+    <p>© 2026 VN INTERN. All Rights Reserved.</p>
+
+  </footer>
+
+</body>
+</html>
